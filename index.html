@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Waste Management & Sustainability | Academic Submissions Dashboard • Harshita Dhande</title>
+  <meta name="description" content="Academic Submission & Evaluation Dashboard for E-Waste Management Coursework by Harshita Dhande (CMPN-A, Roll: 24102A0071, TE-CMPN), Evaluated by Prof. Aniket Kundu.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+  <!-- Top Global Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-badge-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
+            <path d="M11 19h8.203a1.83 1.83 0 0 0 1.556-.89 1.784 1.784 0 0 0 0-1.775l-1.226-2.12"/>
+            <path d="m14 16-3 3 3 3"/>
+            <path d="M8.293 13.596 5.5 9.5 9.7 2.16a1.79 1.79 0 0 1 1.56-.91h3.48a1.78 1.78 0 0 1 1.55.91L18.5 7"/>
+            <path d="m18 10 3-1.7-1.7-3"/>
+            <path d="m9.5 21.5-1.5-2.5 1.5-2.5"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-row">
+            <span class="brand-title">EcoTrack Academic Portal</span>
+            <span class="brand-badge-div">CMPN-A</span>
+            <span class="brand-badge-year">TE-CMPN</span>
+          </div>
+          <span class="brand-subtitle">Department of Computer Engineering • Harshita Dhande</span>
+        </div>
+      </div>
+
+      <div class="nav-faculty-card">
+        <span class="faculty-tag">Faculty Evaluator</span>
+        <strong class="faculty-name">Prof. Aniket Kundu</strong>
+      </div>
+
+      <div class="nav-actions">
+        <!-- View Toggle (Cards vs Table) -->
+        <div class="view-switch-group">
+          <button id="viewGridBtn" class="switch-btn active" title="Grid Card View">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Cards</span>
+          </button>
+          <button id="viewTableBtn" class="switch-btn" title="Compact Table View">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <span>Table</span>
+          </button>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="icon-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Evaluation Rubric Drawer Button -->
+        <button id="evaluationDrawerBtn" class="primary-btn glow-button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 11l3 3L22 4"></path>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+          <span>Evaluation Rubric</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrap -->
+  <main class="main-layout">
+    <!-- Academic Hero Profile Section -->
+    <section class="hero-section">
+      <div class="hero-top-bar">
+        <div class="academic-tags">
+          <span class="solid-tag pink">Academic Portfolio</span>
+          <span class="solid-tag purple">Course: E-Waste Management & Sustainability</span>
+          <span class="solid-tag lavender">Term: ISA & ESE 2026</span>
+          <span class="solid-tag white-pill">TE-CMPN • CMPN-A</span>
+        </div>
+        <div class="eval-ready-badge">
+          <span class="status-pulse-dot"></span>
+          <span>Verified for Grading</span>
+        </div>
+      </div>
+
+      <div class="hero-main-row">
+        <div class="hero-title-area">
+          <h1 class="hero-title">
+            E-Waste Coursework & Project Submissions
+          </h1>
+          <p class="hero-description">
+            Welcome, <strong>Prof. Aniket Kundu</strong>! This interactive dashboard consolidates all academic deliverables, deployed web analytics portals, research papers, field datasets, venture startup pitch decks, and campus awareness campaigns completed by <strong>Harshita Dhande</strong> (Roll: <code>24102A0071</code>) for Division <strong>CMPN-A</strong>, Department of Computer Engineering (<strong>TE-CMPN</strong>).
+          </p>
+        </div>
+
+        <div class="hero-actions-bar">
+          <button class="btn-primary-purple" onclick="openEvaluationDrawer()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <span>Open Rubric Sheet</span>
+          </button>
+          <button class="btn-secondary" onclick="copyAllLinks()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copyLinksText">Copy Project Links</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Verified Student Credentials Grid -->
+      <div class="credentials-grid">
+        <!-- 1. Candidate Info -->
+        <div class="cred-card card-pink-glow">
+          <div class="cred-icon user-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="cred-details">
+            <span class="cred-label">Student Candidate</span>
+            <h4 class="cred-value">Harshita Dhande</h4>
+          </div>
+        </div>
+
+        <!-- 2. Roll & Division -->
+        <div class="cred-card card-purple-glow">
+          <div class="cred-icon roll-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+              <line x1="7" y1="8" x2="17" y2="8"></line>
+              <line x1="7" y1="12" x2="17" y2="12"></line>
+              <line x1="7" y1="16" x2="13" y2="16"></line>
+            </svg>
+          </div>
+          <div class="cred-details">
+            <span class="cred-label">Roll Number & Division</span>
+            <div class="cred-flex-value">
+              <span class="cred-code font-mono">24102A0071</span>
+              <span class="badge-div">CMPN-A</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Department & Year -->
+        <div class="cred-card card-pink-glow">
+          <div class="cred-icon dept-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <div class="cred-details">
+            <span class="cred-label">Department & Year</span>
+            <div class="cred-flex-value">
+              <h4 class="cred-value">TE-CMPN</h4>
+              <span class="badge-tag">3rd Year</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Course Professor -->
+        <div class="cred-card highlight-faculty">
+          <div class="cred-icon mentor-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <div class="cred-details">
+            <span class="cred-label">Faculty Evaluator / Professor</span>
+            <h4 class="cred-value text-faculty">Prof. Aniket Kundu</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Metric Counters -->
+      <div class="metrics-strip">
+        <div class="metric-item border-all" onclick="applyMetricFilter('all')">
+          <div class="metric-number text-gradient-purple">11</div>
+          <div class="metric-meta">
+            <span class="metric-title">Total Submissions</span>
+            <span class="metric-sub">4 ISA + 7 ESE Deliverables</span>
+          </div>
+        </div>
+
+        <div class="metric-item border-isa" onclick="applyMetricFilter('isa')">
+          <div class="metric-number text-purple">04</div>
+          <div class="metric-meta">
+            <span class="metric-title">ISA Activities</span>
+            <span class="metric-sub">State Tracker, PPT & Blueprints</span>
+          </div>
+        </div>
+
+        <div class="metric-item border-ese" onclick="applyMetricFilter('ese')">
+          <div class="metric-number text-pink">07</div>
+          <div class="metric-meta">
+            <span class="metric-title">ESE Activities</span>
+            <span class="metric-sub">Research, Case Studies & Startups</span>
+          </div>
+        </div>
+
+        <div class="metric-item border-live" onclick="applyMetricFilter('live')">
+          <div class="metric-number text-gradient-pink">04</div>
+          <div class="metric-meta">
+            <span class="metric-title">Live Deployments</span>
+            <span class="metric-sub">Interactive Web Dashboards & Apps</span>
+          </div>
+        </div>
+
+        <div class="metric-item border-docs" onclick="applyMetricFilter('all')">
+          <div class="metric-number text-lavender">15</div>
+          <div class="metric-meta">
+            <span class="metric-title">Attached Deliverables</span>
+            <span class="metric-sub">PDFs, Word, PPTX & Excel Files</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Academic Milestone Pathway -->
+    <section class="timeline-section">
+      <div class="section-title-bar">
+        <div class="title-left">
+          <div class="icon-square pink-gradient">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 14 14"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h3 class="section-heading">Coursework Progression & Milestones</h3>
+            <p class="section-caption">From initial appraisal and elemental mapping to live deployed analytics, DevOps, and IEEE research publication.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-track">
+        <!-- Milestone 1 -->
+        <div class="timeline-node" onclick="jumpToCard('isa-0')">
+          <div class="node-indicator">1</div>
+          <div class="node-content">
+            <span class="node-tag isa">ISA Baseline</span>
+            <h5>Assignment Zero</h5>
+            <p>AAP Protocol Check</p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-node" onclick="jumpToCard('isa-1')">
+          <div class="node-indicator">2</div>
+          <div class="node-content">
+            <span class="node-tag isa">ISA Tracker</span>
+            <h5>Uttarakhand Tracker</h5>
+            <p>Report & Data Log</p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-node" onclick="jumpToCard('isa-2')">
+          <div class="node-indicator">3</div>
+          <div class="node-content">
+            <span class="node-tag isa">In-Class</span>
+            <h5>Elemental Blueprint</h5>
+            <p>PCB Toxic & Rare Metal Map</p>
+          </div>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="timeline-node" onclick="jumpToCard('ese-2')">
+          <div class="node-indicator">4</div>
+          <div class="node-content">
+            <span class="node-tag ese">ESE DevOps</span>
+            <h5>5 Indian Companies</h5>
+            <p>Compliance Web Portal</p>
+          </div>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="timeline-node" onclick="jumpToCard('ese-4')">
+          <div class="node-indicator">5</div>
+          <div class="node-content">
+            <span class="node-tag ese">College Drive</span>
+            <h5>Campus Campaign</h5>
+            <p>Quiz App & Live Analytics</p>
+          </div>
+        </div>
+
+        <!-- Milestone 6 -->
+        <div class="timeline-node" onclick="jumpToCard('ese-5')">
+          <div class="node-indicator">6</div>
+          <div class="node-content">
+            <span class="node-tag ese">LEED v5</span>
+            <h5>Green Building App</h5>
+            <p>Top 10 Indian LEED Structures</p>
+          </div>
+        </div>
+
+        <!-- Milestone 7 -->
+        <div class="timeline-node" onclick="jumpToCard('ese-7')">
+          <div class="node-indicator">7</div>
+          <div class="node-content">
+            <span class="node-tag ese">Publication</span>
+            <h5>IEEE Research Paper</h5>
+            <p>Verifiable Recovery Firmware</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spotlight Deployed Web Dashboards (Pink & Purple Accents) -->
+    <section class="spotlight-section">
+      <div class="section-title-bar">
+        <div class="title-left">
+          <div class="icon-square purple-gradient">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div>
+            <h2 class="section-heading">Deployed Live Dashboards & Web Platforms</h2>
+            <p class="section-caption">Interactive web software and live cloud applications submitted by Harshita Dhande.</p>
+          </div>
+        </div>
+        <div class="title-right">
+          <span class="badge-solid-pink">4 Active Deployed Endpoints</span>
+        </div>
+      </div>
+
+      <div class="spotlight-grid">
+        <!-- 1. Indian Companies DevOps -->
+        <div class="app-card border-card-purple">
+          <div class="app-card-header">
+            <span class="module-chip purple">ESE Submission</span>
+            <span class="live-pill"><span class="live-dot pulse-pink"></span> Live</span>
+          </div>
+          <h3 class="app-card-title">Indian Companies Following E-Waste Rules</h3>
+          <p class="app-card-desc">Comprehensive analysis of 5 top Indian corporate giants adhering to EPR mandates, integrated into automated DevOps web hosting.</p>
+          <div class="app-card-footer">
+            <a href="https://samruddhinareshsakharkar.github.io/Miniproject_Devops/?classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=b50c1ce2-6167-487e-9f08-51a50e9fbaf0&submissionId=9947b6dc-8517-83e9-9004-774c64ac524d" target="_blank" rel="noopener noreferrer" class="btn-solid-launch">
+              <span>Launch Deployed</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <button class="btn-solid-preview" onclick="openPreviewModal('https://samruddhinareshsakharkar.github.io/Miniproject_Devops/?classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=b50c1ce2-6167-487e-9f08-51a50e9fbaf0&submissionId=9947b6dc-8517-83e9-9004-774c64ac524d', '5 Indian Companies Compliance Dashboard')">
+              <span>Preview</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Campaign Analytics Dashboard -->
+        <div class="app-card border-card-pink">
+          <div class="app-card-header">
+            <span class="module-chip pink">Campaign Portal</span>
+            <span class="live-pill"><span class="live-dot pulse-purple"></span> Live</span>
+          </div>
+          <h3 class="app-card-title">College Campaign Real-time Dashboard</h3>
+          <p class="app-card-desc">Live analytics telemetry visualizing campus collection bin volumes, student response rates, and recycling drive metrics.</p>
+          <div class="app-card-footer">
+            <a href="https://pratiksha9321.github.io/ewaste-dashboard/?classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=91618746-47e9-4f9c-99ca-697c3e2c90f6&submissionId=cc97ed25-40b7-a7aa-c3d4-60aca53fb838&classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=91618746-47e9-4f9c-99ca-697c3e2c90f6&submissionId=b22e3da6-5de6-4f3e-d9f2-6b7822651c37" target="_blank" rel="noopener noreferrer" class="btn-solid-launch">
+              <span>Launch Deployed</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <button class="btn-solid-preview" onclick="openPreviewModal('https://pratiksha9321.github.io/ewaste-dashboard/?classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=91618746-47e9-4f9c-99ca-697c3e2c90f6&submissionId=cc97ed25-40b7-a7aa-c3d4-60aca53fb838&classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=91618746-47e9-4f9c-99ca-697c3e2c90f6&submissionId=b22e3da6-5de6-4f3e-d9f2-6b7822651c37', 'College Campaign Analytics Dashboard')">
+              <span>Preview</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Campus Quiz App -->
+        <div class="app-card border-card-pink">
+          <div class="app-card-header">
+            <span class="module-chip pink">Campaign Portal</span>
+            <span class="live-pill"><span class="live-dot pulse-pink"></span> Live</span>
+          </div>
+          <h3 class="app-card-title">E-Waste Campus Quiz & Survey Portal</h3>
+          <p class="app-card-desc">Interactive student awareness quiz application assessing community knowledge of toxic components and disposal habits.</p>
+          <div class="app-card-footer">
+            <a href="https://samruddhinareshsakharkar.github.io/ewaste-quiz-form/?classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=91618746-47e9-4f9c-99ca-697c3e2c90f6&submissionId=cc97ed25-40b7-a7aa-c3d4-60aca53fb838&classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=91618746-47e9-4f9c-99ca-697c3e2c90f6&submissionId=b22e3da6-5de6-4f3e-d9f2-6b7822651c37" target="_blank" rel="noopener noreferrer" class="btn-solid-launch">
+              <span>Launch Deployed</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <button class="btn-solid-preview" onclick="openPreviewModal('https://samruddhinareshsakharkar.github.io/ewaste-quiz-form/?classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=91618746-47e9-4f9c-99ca-697c3e2c90f6&submissionId=cc97ed25-40b7-a7aa-c3d4-60aca53fb838&classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=91618746-47e9-4f9c-99ca-697c3e2c90f6&submissionId=b22e3da6-5de6-4f3e-d9f2-6b7822651c37', 'Campus Quiz & Survey Form')">
+              <span>Preview</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Green Building Detector -->
+        <div class="app-card border-card-purple">
+          <div class="app-card-header">
+            <span class="module-chip purple">LEED v5 / Vercel</span>
+            <span class="live-pill"><span class="live-dot pulse-purple"></span> Live</span>
+          </div>
+          <h3 class="app-card-title">Green Building Detector Web App</h3>
+          <p class="app-card-desc">Cloud-deployed application classifying energy performance and certification parameters for Top 10 Indian green commercial projects.</p>
+          <div class="app-card-footer">
+            <a href="https://green-building-detector.vercel.app/?classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=f7c58a0a-f019-4032-9fc8-d08626ab7c25&submissionId=07b7c376-37d5-3746-6a0c-4b091b43c913" target="_blank" rel="noopener noreferrer" class="btn-solid-launch">
+              <span>Launch Deployed</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            <button class="btn-solid-preview" onclick="openPreviewModal('https://green-building-detector.vercel.app/?classId=00895ab0-667b-4c7a-9f41-0531511b5f18&assignmentId=f7c58a0a-f019-4032-9fc8-d08626ab7c25&submissionId=07b7c376-37d5-3746-6a0c-4b091b43c913', 'Green Building Detector App')">
+              <span>Preview</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Activities Section -->
+    <section class="activities-section" id="activitiesSection">
+      <!-- Toolbar: Real-time Search & Filter Pills -->
+      <div class="controls-toolbar">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search activities, keywords, topic, or file names (e.g. LEED, Uttarakhand, IEEE, Case Study, Blueprint)..." autocomplete="off">
+          <button id="clearSearch" class="clear-btn" style="display: none;" title="Clear search">×</button>
+        </div>
+
+        <div class="filter-pills" id="filterPills">
+          <button class="filter-pill active" data-filter="all">All Activities (11)</button>
+          <button class="filter-pill" data-filter="isa">ISA Modules (4)</button>
+          <button class="filter-pill" data-filter="ese">ESE Modules (7)</button>
+          <button class="filter-pill" data-filter="live">With Live Dashboards (4)</button>
+          <button class="filter-pill" data-filter="presentation">Presentations & Slides (2)</button>
+        </div>
+      </div>
+
+      <!-- View Container 1: Grid Cards -->
+      <div class="activities-grid" id="activitiesGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- View Container 2: Compact Table View for Sir -->
+      <div class="activities-table-wrapper" id="activitiesTableWrapper" style="display: none;">
+        <table class="activities-table">
+          <thead>
+            <tr>
+              <th># Code</th>
+              <th>Assessment</th>
+              <th>Activity Title</th>
+              <th>Deliverables / Attached Files</th>
+              <th>Live Web App</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="activitiesTableBody">
+            <!-- Rendered dynamically by app.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Empty State -->
+      <div id="noResults" class="empty-state" style="display: none;">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <h3>No matching activities found</h3>
+        <p>Try searching for a different keyword or resetting your filter criteria.</p>
+        <button class="btn-solid-preview" onclick="resetFilters()">Reset All Filters</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Faculty Evaluation & Grade Sheet Drawer for Prof. Aniket Kundu -->
+  <aside class="evaluation-drawer" id="evaluationDrawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <div class="eval-avatar">AK</div>
+        <div>
+          <h3>Academic Evaluation Rubric</h3>
+          <p>Prepared for <strong>Prof. Aniket Kundu</strong></p>
+        </div>
+      </div>
+      <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close Evaluation Sheet">×</button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Candidate Dossier Card -->
+      <div class="dossier-card">
+        <div class="dossier-row">
+          <span class="d-label">Candidate:</span>
+          <strong>Harshita Dhande</strong>
+        </div>
+        <div class="dossier-row">
+          <span class="d-label">Roll Number:</span>
+          <span class="font-mono text-purple">24102A0071</span>
+        </div>
+        <div class="dossier-row">
+          <span class="d-label">Class & Div:</span>
+          <span class="badge-solid-pink-sm">CMPN-A (TE-CMPN)</span>
+        </div>
+        <div class="dossier-row">
+          <span class="d-label">Course:</span>
+          <span>E-Waste Management & Sustainability</span>
+        </div>
+
+        <div class="dossier-progress">
+          <div class="progress-labels">
+            <span>Verified Submissions</span>
+            <span id="verifiedCountText">0 / 11 Checked</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="checklistProgress" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Interactive Scoring Calculator for Prof. Aniket Kundu -->
+      <div class="rubric-calculator">
+        <h4 class="calc-heading">Scoring Rubric (Total: 50 Marks)</h4>
+        
+        <div class="rubric-input-row">
+          <label>ISA Activities & State Tracker (10):</label>
+          <input type="number" id="scoreIsa" min="0" max="10" value="10" oninput="calculateTotalScore()">
+        </div>
+
+        <div class="rubric-input-row">
+          <label>Live Dashboards & Cloud Deployments (10):</label>
+          <input type="number" id="scoreLive" min="0" max="10" value="10" oninput="calculateTotalScore()">
+        </div>
+
+        <div class="rubric-input-row">
+          <label>IEEE Paper & Technical Research (10):</label>
+          <input type="number" id="scoreIeee" min="0" max="10" value="10" oninput="calculateTotalScore()">
+        </div>
+
+        <div class="rubric-input-row">
+          <label>Case Studies & Industry Analysis (10):</label>
+          <input type="number" id="scoreCase" min="0" max="10" value="10" oninput="calculateTotalScore()">
+        </div>
+
+        <div class="rubric-input-row">
+          <label>Campaign Drive, Quiz & Startup Pitch (10):</label>
+          <input type="number" id="scorePitch" min="0" max="10" value="10" oninput="calculateTotalScore()">
+        </div>
+
+        <div class="total-score-badge">
+          <span>Final Evaluated Grade:</span>
+          <span class="total-score-number" id="totalScoreText">50 / 50 (100% - Outstanding)</span>
+        </div>
+      </div>
+
+      <!-- Checklist Section -->
+      <div class="checklist-section">
+        <div class="checklist-category-title text-purple">ISA Submissions (In-Semester)</div>
+        <div class="checklist-items" id="isaChecklist"></div>
+
+        <div class="checklist-category-title text-pink">ESE Submissions (End-Semester)</div>
+        <div class="checklist-items" id="eseChecklist"></div>
+      </div>
+
+      <div class="faculty-notes-section">
+        <label for="facultyComments">Professor's Remarks & Feedback:</label>
+        <textarea id="facultyComments" placeholder="Enter remarks or recommendations from Prof. Aniket Kundu..."></textarea>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <button class="btn-solid-preview" onclick="window.print()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span>Print Sheet</span>
+      </button>
+      <button class="primary-btn glow-button" onclick="saveEvaluationLocal()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+          <polyline points="17 21 17 13 7 13 7 21"></polyline>
+          <polyline points="7 3 7 8 15 8"></polyline>
+        </svg>
+        <span>Save Marks</span>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- Interactive Live Dashboard & PDF Preview Modal -->
+  <div class="modal-overlay" id="previewModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-status-dot pulse-pink"></span>
+          <h3 id="modalTitle">Dashboard Live Preview</h3>
+          <span id="modalUrl" class="modal-url font-mono"></span>
+        </div>
+        <div class="modal-actions">
+          <a id="modalExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-solid-preview" title="Open in browser tab">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <span>Open in Tab</span>
+          </a>
+          <button class="modal-close-btn" onclick="closePreviewModal()" aria-label="Close Preview">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="iframe-loader" id="modalLoader">
+          <div class="spinner"></div>
+          <p>Connecting to application...</p>
+        </div>
+        <iframe id="previewIframe" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- High-Res Image Preview Modal (Campus Poster) -->
+  <div class="modal-overlay" id="imageModal">
+    <div class="modal-window image-modal-window">
+      <div class="modal-header">
+        <h3 id="imageModalTitle">Campus Campaign Poster Preview</h3>
+        <div class="modal-actions">
+          <a id="imageModalDownload" href="#" download class="btn-solid-preview">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Poster</span>
+          </a>
+          <button class="modal-close-btn" onclick="closeImageModal()" aria-label="Close Image">×</button>
+        </div>
+      </div>
+      <div class="modal-body image-modal-body">
+        <img id="imageModalSrc" src="" alt="Campaign Poster High Resolution">
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-notification"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand-row">
+          <span class="footer-badge">EcoTrack Academic Submissions</span>
+          <span class="badge-div">CMPN-A</span>
+          <span class="badge-tag">TE-CMPN</span>
+        </div>
+        <p>Submitted by <strong>Harshita Dhande</strong> (Roll: <code>24102A0071</code>) | Evaluated by <strong>Prof. Aniket Kundu</strong></p>
+      </div>
+      <div class="footer-right">
+        <span>Department of Computer Engineering</span>
+        <button class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+          <span>Back to Top</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
